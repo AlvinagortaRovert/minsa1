@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Mi Aplicación{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Aplicación</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'usuario-list' %}">Usuarios</a></li>
+            <li><a href="{% url 'home' %}">Inicio</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        <!-- Contenido específico de la página -->
+        {% endblock %}
+    </main>
+    <footer>
+        <p>© 2024 Mi Aplicación</p>
+    </footer>
+</body>
+</html>
